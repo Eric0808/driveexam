@@ -1,0 +1,75 @@
+﻿.top {
+	BACKGROUND: url(/images/topbarbg.png) #ffffff; WIDTH: 100%; BORDER-BOTTOM: #e7e7e7 1px solid; HEIGHT: 29px
+}
+.topbar {
+	MARGIN: 0px auto; WIDTH: 970px
+}
+.topbar DIV {
+	LINE-HEIGHT: 29px
+}
+.topbar DIV A {
+	DISPLAY: inline-block; MARGIN: 0px 5px
+}
+.topbar .l {
+	FLOAT: left
+}
+.topbar .r {
+	FLOAT: right
+}
+.headermo {
+	BACKGROUND: url(/images/logobg.png); BORDER-BOTTOM: #92c5da 1px solid; HEIGHT: 97px
+}
+.header {
+	MARGIN: 0px auto; WIDTH: 970px
+}
+.logo {
+	MARGIN-TOP: 20px; PADDING-LEFT: 16px; WIDTH: 204px; HEIGHT: 55px
+}
+.nav {
+	BACKGROUND: url(/images/index-nav.png); LINE-HEIGHT: 38px; HEIGHT: 38px
+}
+.nav .left {
+	BACKGROUND: url(/images/nav_left.gif); WIDTH: 9px; HEIGHT: 39px
+}
+.nav .middle {
+	TEXT-ALIGN: center
+}
+.txtalgincen {
+	TEXT-ALIGN: center
+}
+.nav A {
+	PADDING-RIGHT: 20px; DISPLAY: inline-block; PADDING-LEFT: 20px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(/images/navline.png) no-repeat right 50%; PADDING-BOTTOM: 0px; COLOR: #fff; PADDING-TOP: 0px
+}
+.nav .r {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.nobg {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.searchbar {
+	BORDER-RIGHT: #92c5da 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #92c5da 1px solid; MARGIN-TOP: 11px; PADDING-LEFT: 10px; PADDING-BOTTOM: 4px; BORDER-LEFT: #92c5da 1px solid; WIDTH: 178px; PADDING-TOP: 4px; BORDER-BOTTOM: #92c5da 1px solid; HEIGHT: 65px
+}
+.searchbar .t {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 102px; LINE-HEIGHT: 18px; HEIGHT: 38px
+}
+.searchbar .btns {
+	FLOAT: left; PADDING-TOP: 2px
+}
+.searchbar .btns A {
+	DISPLAY: block; BACKGROUND: url(/images/btn_change.png); WIDTH: 72px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 29px; BORDER-BOTTOM-STYLE: none
+}
+.searchbar .divkey {
+	CLEAR: both; MARGIN-TOP: 3px; WIDTH: auto; HEIGHT: 22px
+}
+.searchbar .divkey .inp {
+	BORDER-RIGHT: #a4c9ee 1px solid; BORDER-TOP: #a4c9ee 1px solid; PADDING-LEFT: 3px; FLOAT: left; VERTICAL-ALIGN: middle; BORDER-LEFT: #a4c9ee 1px solid; WIDTH: 146px; COLOR: #999; LINE-HEIGHT: 18px; BORDER-BOTTOM: #a4c9ee 1px solid; HEIGHT: 18px
+}
+.searchbar .divkey .searchbtn {
+	DISPLAY: block; BACKGROUND: url(/images/magnifier.png); FLOAT: left; MARGIN: 2px 0px 2px 5px; WIDTH: 16px; CURSOR: pointer; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 16px; BORDER-BOTTOM-STYLE: none
+}
+.banner {
+	MARGIN-TOP: 11px; MARGIN-RIGHT: 10px
+}
+.mypngbg {
+	
+}

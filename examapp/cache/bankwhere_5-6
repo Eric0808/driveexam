@@ -1,0 +1,1 @@
+a:3:{s:4:"time";i:1367652320;s:3:"ttl";i:300;s:4:"data";s:50:" ( `bankid` LIKE '%5,%' OR `bankid` LIKE '%6,%' ) ";}

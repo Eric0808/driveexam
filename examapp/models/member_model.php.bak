@@ -1,0 +1,117 @@
+<?php
+
+final class member_model extends CI_Model
+{
+	
+	private $tname = 'member_info';
+	private $tname1 = 'record_info';
+	
+	public function __construct()
+	{
+		if( date_default_timezone_get() !== 'Asia/Shanghai'){
+			date_default_timezone_set('Asia/Shanghai');
+		}
+		parent::__construct();
+	}
+
+	public function createMember($info)
+	{
+		$data['email'] = $info['email'];
+		if( $this->db->get_where($this->tname, $data)->num_rows !== 0 ){
+			return array('code'=> 1, 'msg'=>'该邮箱地址已注册过，您是否忘记了密码？');
+		}
+		$data['username'] = htmlspecialchars($info['username']);
+		$data['password'] = $this->passwordHash($info['password']);
+		
+		$data['regdate'] = time();
+		$data['regip'] = $this->input->ip_address();
+		
+		$result = $this->db->insert($this->tname, $data);
+		return array('code'=>0, 'id'=>$this->db->insert_id(), 'name'=>$data['username']);
+	}
+	
+	//根据条件获取所有用户信息列表
+	public function Getallmember($page = 1, $pageSize = 20, $setPages = 10, $where='', $order=''){
+		
+		$sqlStr = "SELECT * FROM {$this->tname} AS m {$where} LEFT JOIN (SELECT DISTINCT userid AS id, COUNT( userid ) AS num FROM {$this->tname1} GROUP BY userid) AS l ON m.userid = l.id ";
+		$sqlStr1 = "SELECT COUNT(*) FROM {$this->tname} {$where} ";
+		$allnum=$this->getuser_num($sqlStr1);
+		$page = max(intval($page), 1);
+		$offset = $pageSize*($page-1);
+		$query[0] =$this->globalfunc->pages($allnum, $page, $pageSize,$setPages);
+		if($allnum >0){
+			$sqlStr .= " $order LIMIT $offset, $pageSize";
+			$query[1] = $this->db->query($sqlStr)->result();
+			return $query;
+		}		
+		else
+		return null;
+		
+	}
+	//根据条件获取所有用户记录的数量
+	public function getuser_num($sqlStr){
+	
+		$num = $this->db->query($sqlStr)->row_array();
+		return $num['COUNT(*)'];
+	}
+	//根据ID删除用户信息包括考试记录
+	public function deluser_byID($UID){
+		$status = array();
+		$status[0] = $this->db->delete($this->tname, array('userid' => $UID)); 
+		$status[1] = $this->db->delete($this->tname1, array('userid' => $UID));
+	    return $status;
+	}
+
+	public function logIn($info)
+	{
+		$info['email'] = $this->db->escape($info['email']);
+		
+		$sql = "SELECT * FROM `{$this->tname}` 
+				WHERE `email`={$info['email']}";
+
+		$result = $this->db->query($sql);
+		if( $result->num_rows === 0 ){
+			return array('code'=> 1, 'msg'=>'用户不存在');
+		}
+		$data = $result->row_array();
+		if( $data['password'] !== $this->passwordHash($info['password']) ){
+			return array('code'=>2, 'msg'=>'密码或用户名错误');
+		}
+		
+		return array('code'=>0, 'id'=> $data['id'], 'name'=>$data['name']);
+	}
+	
+	
+	public function getSubject($userid)
+	{
+		if( ! is_numeric($userid) )
+			return false;
+		$sql = "SELECT `subjectlist` FROM `{$this->tname}` WHERE id = '$userid'";
+		$result = $this->db->query($sql)->row_array();
+		if( is_array($result) ){
+			return explode(',', $result['subjectlist']);
+		}else{
+			return array();
+		}
+	}
+	
+	public function addSubject($uid, $cids)
+	{
+		$subjects = implode(',', $cids);
+		$sql = "UPDATE `{$this->tname}` SET `subjectlist`=CONCAT( IFNULL(`subjectlist`, ''), ',{$subjects}') WHERE `id`={$uid}";
+		return $this->db->query($sql);
+	}
+	
+	
+	public function getInfo($uid, $select='*')
+	{
+		$sql = "SELECT {$select} FROM `{$this->tname}` WHERE id = '$uid'";
+		return $this->db->query($sql)->row_array();
+	}
+	
+	
+	private function passwordHash($password)
+	{
+		return md5($password);
+	}
+}

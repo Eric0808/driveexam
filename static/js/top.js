@@ -1,0 +1,1 @@
+document.writeln("<a href=\"http:\/\/m.jszks.com\/\" style=\"color:#FF0000\" target=\"_blank\">手机版<\/a>&nbsp;&nbsp;<a href=\"Javascript:window.external.addFavorite(document.location.href,document.title)\">加入收藏<\/a>")

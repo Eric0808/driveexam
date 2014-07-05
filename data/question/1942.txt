@@ -1,0 +1,1 @@
+{"id":1942,"question":"\u7acb\u4ea4\u6865\u4e0a\u4e00\u822c\u90fd\u662f\u5355\u5411\u884c\u9a76\uff0c\u8f66\u8f86\u4e0d\u5fc5\u51cf\u901f\u884c\u9a76\u3002","answer":2,"image":"","thumb":"","type":0,"item1":"","item2":"","item3":"","item4":"","explain":"\u7acb\u4ea4\u6865\u4e0a\u8f66\u591a,\u8def\u7a84,\u5f2f\u591a,\u6240\u4ee5\u5e94\u51cf\u901f\uff01","explainid":1942}

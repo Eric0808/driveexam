@@ -1,0 +1,77 @@
+﻿#runtime{ float:right; color:#C2DCF5; font-size:12px; font-weight: normal; }
+
+.study{ font-family: 宋体,微软雅黑;font-size: 20px;font-weight: bold;line-height: 27px; padding: 10px 5px 0;}
+.study  b{font-size: 24px;font-family: arial;}
+.s1{ height: 205px; }
+#image{ float: right; font-size: 13px; margin-top:5px; margin-right: 10px;text-align:right;}
+
+.bigimage{position:absolute; z-index:100; width:440px; 
+	height:300px;}
+
+
+#question{ line-height: 22px; height: 60px; }
+
+#item1,#item2,#item3,#item4{ padding: 3px 0 3px 10px; font-size: 13px; width: 430px; color: #444; }
+#item1 input,#item2 input,#item3 input,#item4 raido{ font-size:20px;}
+
+.s2{font-size:16px;height:75px;}
+.choose{float:left;width:380px;line-height:30px;}
+/* #result{ border-bottom: 1px solid #000; width: 100px;color:blue; } */
+#trueresult{padding-left: 20px;color:red; }
+#useranswer{}
+.control{float:right;width:280px;text-align:center;}
+#button{height:40px;padding-right:10px;}
+*#button input{padding: 7px 12px 5px 12px !important;margin: 0 0 0 7px;font-size: 20px;font-weight: bold;font-family: 宋体;}
+/*#button a{ display:block; cursor: pointer; float:left; width:36px; line-height:25px; text-align: center;
+			font-family: Verdana, Arial, Helvetica, sans-serif; color: #0788CC; 
+			background-image: url(../images/button.jpg); background-repeat: no-repeat; text-align: center; margin: 0 4px; font-weight: bold; }*/
+/*#button a:hover{background-image: url(../images/button_hover.jpg); }*/
+
+#prenext{height:40px;}
+#prenext a{ display:block; float:right; width:79px; line-height:24px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; background-image: url(../images/prenext.jpg); background-repeat: no-repeat; text-align: center; margin: 0 5px; font-size: 13px; }
+#prenext a.examsend{width:58px;background-image: url(../images/examsend.jpg);}
+
+.s2 #submit{
+float:right; margin-left:20px;
+}
+
+.s3{height:50px;margin:30px -12px;}
+#bar{ width:704px; margin:17px 0 0; background-image: url(../images/bar.png); background-repeat: no-repeat; height: 22px; background-position: 0px 0px; cursor: pointer; }
+#baron{width:0px;height:22px; z-index:8;
+}
+#barnum{ margin-top:-18px; z-index:9; float:left; text-align:center; width:23px; height:17px; color:gray; font-size:9px; 
+line-height:13px; background: url(../images/tips.jpg) no-repeat 0px 0px; font-family: Arial, Helvetica, sans-serif; 
+}
+
+.s4{height:38px;width:704px;margin:0 auto;}
+.s4 a{ display:block; float:left; width:auto; margin:auto 5px; color:#003399; text-decoration:none; font-size:15px; font-weight:bold}
+.s4 label{ float:right; color: #003399; cursor: hand;padding-right:5px; }
+
+/*模拟考试选择器*/
+.a10 {  line-height:14px;margin-left:5px;width:730px;_width:712px;font-size:10px;margin-top:-13px; }
+.a10 a {color:#888; display:block; padding:2px 0 0 2px; float:left; width:29px; height:28px; margin:3px 3px 0 0;_margin:3px 2px 0 0; border:1px solid #ddd; }
+.a10 a span { display:block; text-align:right; padding-right:3px; color:#333;font-size:9px; }
+.a10 a.answer { background:#ff9; }
+.a10 a.select { background:#f7f7f7;}
+.a10 a.flag{color:red;}
+.a10 a.error{border:1px solid #ff6f6f;background:#ffefef;}
+.a10 a:hover{border:1px solid #09f;background:#dff;}
+
+/*仿真考试选择器*/
+.a10_t {  line-height:14px;margin-left:5px;font-size:10px;margin-top:-13px; }
+.a10_t a {color:#888; display:block; padding:2px 0 0 2px; float:left; width:39px; height:30px; margin:3px 3px 0 0;_margin:3px 2px 0 0; border:1px solid #ddd; }
+.a10_t a span { display:block; text-align:right; padding-right:3px; color:#333;font-size:9px; }
+.a10_t a.answer { background:#ff9; }
+.a10_t a.select { background:#f7f7f7;}
+.a10_t a.flag{color:red;}
+.a10_t a.error{border:1px solid #ff6f6f;background:#ffefef;}
+.a10_t a:hover{border:1px solid #09f;background:#dff;text-decoration: none;}
+.a10_t a dd{float:left;}
+.a10_t a .a {
+display: inline-block;
+color: #000;
+vertical-align: bottom;
+margin-top: 5px;
+margin-left: 6px;
+}
+

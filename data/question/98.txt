@@ -1,0 +1,1 @@
+{"id":98,"question":"\u56fe\u4e2d\u6807\u5fd7\u8bbe\u5728\u7981\u6b62\u8fd0\u8f93\u5371\u9669\u54c1\u8f66\u8f86\u9a76\u5165\u8def\u6bb5\u7684\u5165\u53e3\u5904\u3002","answer":1,"image":"20130326154313jh7og.gif","thumb":"","type":0,"item1":"","item2":"","item3":"","item4":"","explain":"","explainid":98}
